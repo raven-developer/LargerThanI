@@ -1,27 +1,34 @@
 @import "_var";
 
-.hero-banner {
-    height: 100vh !important;
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin full-size {
     width: 100%;
+    height: 100%;
+}
+
+.hero-banner {
+    @include full-size;
+    height: 100vh !important;
 }
 
 .dark-overlay {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
+    @include full-size;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .section {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
+    @include full-size;
     position: relative;
     top: 0;
     left: 0;
@@ -47,16 +54,17 @@
     height: auto;
 }
 
-.content-col {
+.content-col, .content {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+}
+
+.content-col {
     row-gap: 48px;
 }
+
 .content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
     row-gap: 28px;
 }
 
@@ -100,7 +108,7 @@
     column-gap: 20px;
 }
 
-.title-line{
+.title-line {
     height: 2px;
     width: 25%;
     margin: 9.5px 0;

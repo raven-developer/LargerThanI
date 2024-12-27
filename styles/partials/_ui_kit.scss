@@ -1,117 +1,29 @@
 @import "_var";
 
-//Fonts
-.urbanist-700 {
+// Mixins
+@mixin urbanist-font($weight, $size, $color) {
     font-family: "Urbanist", serif;
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: $weight;
     font-style: normal;
-}
-
-.urbanist-500 {
-    font-family: "Urbanist", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
-
-//Font Settings
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: $black;
-    line-height: 1.2;
-}
-
-p {
-    color: $off-black;
-    line-height: 1.5;
-}
-
-.w-h1 {
-    @extend .urbanist-700; //scss font-family
-    font-size: 3.815rem;
+    font-size: $size;
+    color: $color;
     letter-spacing: 0;
     text-transform: none;
     text-decoration: none;
-    color: $black;
 }
 
-.w-h2 {
-    @extend .urbanist-700; //scss font-family
-    font-size: 3.052rem;
-    letter-spacing: 0;
-    text-transform: none;
-    text-decoration: none;
-    color: $black;
-}
-
-.w-h3 {
-    @extend .urbanist-700; //scss font-family
-    font-size: 2.441rem;
-    letter-spacing: 0;
-    text-transform: none;
-    text-decoration: none;
-    color: $black;
-}
-
-.w-h4 {
-    @extend .urbanist-700; //scss font-family
-    font-size: 1.953rem;
-    letter-spacing: 0;
-    text-transform: none;
-    text-decoration: none;
-    color: $black;
-}
-
-.w-h5 {
-    @extend .urbanist-700; //scss font-family
-    font-size: 1.563rem;
-    letter-spacing: 0;
-    text-transform: none;
-    text-decoration: none;
-    color: $black;
-}
-
-.w-h6 {
-    @extend .urbanist-700; //scss font-family
-    font-size: 1rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $black;
-}
-
-.nav-items,
-.w-p {
-    @extend .urbanist-500; //scss font-family
-    font-size: 1rem;
-    letter-spacing: 0;
-    text-transform: none;
-    text-decoration: none;
-    color: $off-black;
-}
-
-//Buttons
-.w-button-primary {
+@mixin button-style($bg-color, $text-color) {
     position: relative;
     padding: 16px 32px;
     width: max-content;
-    background-color: $primary;
+    background-color: $bg-color;
     height: 100%;
     border-radius: 12px;
     transition: background-color 300ms ease-in-out;
 
     .w-button-inner {
-        @extend .urbanist-700; //scss font-family
-        font-size: 1rem;
-        letter-spacing: 0;
-        text-transform: none;
-        text-decoration: none;
-        color: $black;
+        @include urbanist-font(700, 1rem, $text-color);
         transition: color 200ms ease-in-out;
     }
 
@@ -124,26 +36,68 @@ p {
     }
 }
 
+// Fonts
+.urbanist-700 {
+    @include urbanist-font(700, null, null);
+}
+
+.urbanist-500 {
+    @include urbanist-font(500, null, null);
+}
+
+// Font Settings
+h1, h2, h3, h4, h5, h6 {
+    color: $black;
+    line-height: 1.2;
+}
+
+p {
+    color: $off-black;
+    line-height: 1.5;
+}
+
+// Headings
+.w-h1 {
+    @include urbanist-font(700, 3.815rem, $black);
+}
+
+.w-h2 {
+    @include urbanist-font(700, 3.052rem, $black);
+}
+
+.w-h3 {
+    @include urbanist-font(700, 2.441rem, $black);
+}
+
+.w-h4 {
+    @include urbanist-font(700, 1.953rem, $black);
+}
+
+.w-h5 {
+    @include urbanist-font(700, 1.563rem, $black);
+}
+
+.w-h6 {
+    @include urbanist-font(700, 1rem, $black);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+// Paragraphs and Nav Items
+.nav-items, .w-p {
+    @include urbanist-font(500, 1rem, $off-black);
+}
+
+// Buttons
+.w-button-primary {
+    @include button-style($primary, $black);
+}
+
 .w-button-play {
-    position: relative;
+    @include button-style(transparent, $white);
     display: flex;
     align-items: center;
     padding: 16px 28px;
-    width: max-content;
-    background-color: transparent;
-    height: 100%;
-    border-radius: 12px;
-    transition: background-color 300ms ease-in-out;
-
-    .w-button-inner {
-        @extend .urbanist-700; //scss font-family
-        font-size: 1rem;
-        letter-spacing: 0;
-        text-transform: none;
-        text-decoration: none;
-        color: $white;
-        transition: color 200ms ease-in-out;
-    }
 
     i.fa-circle-play {
         font-size: 26px;
@@ -155,8 +109,7 @@ p {
     &:hover {
         background-color: $black;
 
-        i.fa-circle-play,
-        .w-button-inner {
+        i.fa-circle-play, .w-button-inner {
             color: $black;
         }
     }
