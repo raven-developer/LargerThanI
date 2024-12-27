@@ -1,0 +1,108 @@
+@import "_var";
+
+//Fonts
+.urbanist-700 {
+    font-family: "Urbanist", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.urbanist-500 {
+    font-family: "Urbanist", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+//Font Settings
+h1, h2, h3, h4, h5, h6 {
+    color: $black;
+    line-height: 1.2;
+}
+
+p {
+    color: $off-black;
+    line-height: 1.5;
+}
+
+.w-h1 {
+    @extend .urbanist-700; //scss font-family
+    font-size: 3.815rem;
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
+    color: $black;
+}
+
+.w-h2 {
+    @extend .urbanist-700; //scss font-family
+    font-size: 3.052rem;
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
+    color: $black;
+}
+
+.w-h3 {
+    @extend .urbanist-700; //scss font-family
+    font-size: 2.441rem;
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
+    color: $black;
+}
+
+.w-h4 {
+    @extend .urbanist-700; //scss font-family
+    font-size: 1.953rem;
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
+    color: $black;
+}
+
+.w-h5 {
+    @extend .urbanist-700; //scss font-family
+    font-size: 1.563rem;
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
+    color: $black;
+}
+
+.w-h6 {
+    @extend .urbanist-700; //scss font-family
+    font-size: 1.25rem;
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
+    color: $black;
+}
+
+.nav-items, .w-p {
+    @extend .urbanist-500; //scss font-family
+    font-size: 1rem;
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
+    color: $off-black;
+}
+
+//Buttons
+.w-button-primary {
+    position: relative;
+    padding: 16px 32px;
+    width: max-content;
+    background-color: $primary;
+    height: 100%;
+
+    .w-button-inner {
+        @extend .urbanist-700; //scss font-family
+        font-size: 1rem;
+        letter-spacing: 0;
+        text-transform: none;
+        text-decoration: none;
+        color: $black;
+    }
+}
