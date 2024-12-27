@@ -12,10 +12,9 @@
     width: 100%;
     height: auto;
     z-index: 100;
-    background-color: $white;
-    border-bottom: 1px solid rgba(255, 255, 255, .3);
     padding: 20px 0;
     transition: all 200ms ease-in-out;
+    border-bottom: 1px solid rgba(239, 239, 242, 0.2);
 }
 
 .w-nav-row {
@@ -23,7 +22,7 @@
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    min-height: 80px;
+    min-height: 100%;
     height: 100%;
     transition: all .3s ease;
 }
@@ -47,6 +46,7 @@
 }
 
 .nav-items {
+    color: $white;
     transition: all .3s ease;
     &:hover{
         color:$primary;

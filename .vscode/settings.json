@@ -1,5 +1,5 @@
 {
-    "liveSassCompile.settings.compileOnWatch": false,
+    "liveSassCompile.settings.compileOnWatch": true,
     "liveSassCompile.settings.useNewCompiler": true,
     "liveSassCompile.settings.showOutputWindowOn": "Warning",
     "liveSassCompile.settings.formats": [
@@ -9,13 +9,9 @@
             "savePath": null,
             "savePathReplacementPairs": null
         }
-    ],
-    "liveSassCompile.settings.includeItems": [
-        "/styles/main.scss"
-        
     ], 
-    "liveSassCompile.settings.excludeList": [
-        "/**/partials/*.scss"
-    ]
+    "liveSassCompile.settings.includeItems": [
+        "/styles/main.scss"  // Only compile the main.scss located in the styles folder
+    ],
 
 }

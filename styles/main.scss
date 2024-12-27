@@ -1,9 +1,44 @@
-@use "partials/_reset";
+@use "partials/reset";
 @use "partials/ui_kit";
 @use "partials/nav";
 @use "partials/global";
 @use "partials/responsive";
+@import "partials/var";
 
 html {
     font-size: 18px;
+    scroll-behavior: smooth !important
+}
+
+//Overrides
+.hero-banner {
+    .w-p {
+        font-size: 22px;
+        color: $white;
+        opacity: 0.9;
+    }
+    .w-h1 {
+        color: $white;
+    }
+    .w-button-play, .w-button-primary {
+        &:hover {
+            background-color: $white;
+    
+            .w-button-inner {
+                color: $black;
+            }
+        }
+    }
+}
+
+.inner-container-000 {
+    margin-top: 100px;
+}
+
+.w-hero-section {
+    background: url('../uploads/10897114103101114116104116105/placeholder-1.jpg') center/cover no-repeat;
+}
+
+.w-nav {
+    background-color: transparent;
 }

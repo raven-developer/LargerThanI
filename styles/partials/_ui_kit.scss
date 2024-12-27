@@ -16,7 +16,12 @@
 }
 
 //Font Settings
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: $black;
     line-height: 1.2;
 }
@@ -73,14 +78,15 @@ p {
 
 .w-h6 {
     @extend .urbanist-700; //scss font-family
-    font-size: 1.25rem;
-    letter-spacing: 0;
-    text-transform: none;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     text-decoration: none;
     color: $black;
 }
 
-.nav-items, .w-p {
+.nav-items,
+.w-p {
     @extend .urbanist-500; //scss font-family
     font-size: 1rem;
     letter-spacing: 0;
@@ -96,6 +102,8 @@ p {
     width: max-content;
     background-color: $primary;
     height: 100%;
+    border-radius: 12px;
+    transition: background-color 300ms ease-in-out;
 
     .w-button-inner {
         @extend .urbanist-700; //scss font-family
@@ -104,5 +112,52 @@ p {
         text-transform: none;
         text-decoration: none;
         color: $black;
+        transition: color 200ms ease-in-out;
+    }
+
+    &:hover {
+        background-color: $black;
+
+        .w-button-inner {
+            color: $white;
+        }
+    }
+}
+
+.w-button-play {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 16px 28px;
+    width: max-content;
+    background-color: transparent;
+    height: 100%;
+    border-radius: 12px;
+    transition: background-color 300ms ease-in-out;
+
+    .w-button-inner {
+        @extend .urbanist-700; //scss font-family
+        font-size: 1rem;
+        letter-spacing: 0;
+        text-transform: none;
+        text-decoration: none;
+        color: $white;
+        transition: color 200ms ease-in-out;
+    }
+
+    i.fa-circle-play {
+        font-size: 26px;
+        color: $white;
+        margin-right: 8px;
+        transition: color 200ms ease-in-out;
+    }
+
+    &:hover {
+        background-color: $black;
+
+        i.fa-circle-play,
+        .w-button-inner {
+            color: $black;
+        }
     }
 }
