@@ -17,13 +17,16 @@ html {
         color: $white;
         opacity: 0.9;
     }
+
     .w-h1 {
         color: $white;
     }
-    .w-button-play, .w-button-primary {
+
+    .w-button-play,
+    .w-button-primary {
         &:hover {
             background-color: $white;
-    
+
             .w-button-inner {
                 color: $black;
             }
@@ -39,6 +42,32 @@ html {
     background: url('../uploads/10897114103101114116104116105/placeholder-1.jpg') center/cover no-repeat;
 }
 
-.w-nav {
-    background-color: transparent;
+.inner-container-102 {
+    flex-direction: column;
+    .w-h6 {
+        width: max-content;
+    }
+    .content-line {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .title-line {
+        max-width: unset;
+        flex-grow: 1;
+        opacity: 0.5;
+    }
+
+}
+
+.supporters-section.section {
+    padding-top: 0;
+}
+
+.whatwedo-section.section {
+    background-color: $section;
+}
+
+.inner-container-103 .content-col {
+    row-gap: 40px;
 }

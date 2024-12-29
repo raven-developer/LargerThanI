@@ -1,5 +1,57 @@
 //Colors
 $primary: #F2C94C;
+$section: #FCEDC6;
 $black: #1D2130;
 $off-black: #525560;
 $white: #EFF7F2;
+
+//Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin urbanist-font($weight, $size, $color) {
+    font-family: "Urbanist", serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: normal;
+    font-size: $size;
+    color: $color;
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
+}
+
+@mixin button-style($bg-color, $text-color) {
+    position: relative;
+    padding: 16px 32px;
+    width: max-content;
+    background-color: $bg-color;
+    height: 100%;
+    @include corner-radius;
+    transition: background-color 300ms ease-in-out;
+
+    .w-button-inner {
+        @include urbanist-font(700, 1rem, $text-color);
+        transition: color 200ms ease-in-out;
+    }
+
+    &:hover {
+        background-color: $black;
+
+        .w-button-inner {
+            color: $white;
+        }
+    }
+}
+
+@mixin full-size {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin corner-radius {
+    border-radius: 12px;
+}

@@ -1,11 +1,5 @@
 @import "_var";
 
-// Mixins
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .max-200 {
     max-width: 200px;
@@ -21,6 +15,7 @@
     padding: 20px 0;
     transition: all 200ms ease-in-out;
     border-bottom: 1px solid rgba(239, 239, 242, 0.2);
+    background-color: transparent;
 }
 
 .w-nav-row {
@@ -35,6 +30,8 @@
 
 .nav-logo {
     @include flex-center;
+    justify-content: flex-start;
+
     img {
         max-height: 64px;
         height: 28px;
@@ -47,12 +44,13 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    gap: 40px;
+    gap: 60px;
 }
 
 .nav-items {
     color: $white;
     transition: all .3s ease;
+
     &:hover {
         color: $primary;
     }
@@ -63,4 +61,39 @@
     align-items: center;
     justify-content: flex-end;
     height: fit-content;
+}
+
+//Sticky Nav
+.sticky {
+    background-color: #ffffff;
+    border-bottom: 1px solid #1d213069;
+    padding: 14px 0;
+
+    .nav-items {
+        color: $black;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .nav-logo img {
+        height: 28px;
+        content: url("../uploads/10897114103101114116104116105/logo.svg");
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .w-button-primary {
+        padding: 10px 32px;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $black !important;
+
+            .w-button-inner {
+                color: $white !important;
+            }
+        }
+    }
+
 }
