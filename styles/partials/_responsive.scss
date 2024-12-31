@@ -1,8 +1,24 @@
 @import "_var";
 
-//1024px
-@media screen and (max-width: 1024px){
+/* Tablet styles */
+@media (max-width: 1023px) {
     .space-col {
         display: none;
     }
+
+    .inner-container {
+        flex-direction: column;
+    }
+
+    .img-col {
+        width: 100% !important;
+    }
+
+    .nav-links,
+    .nav-cta {
+        display: none;
+    }
 }
+
+/* Mobile styles */
+@media (max-width: 767px) {}
