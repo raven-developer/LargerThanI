@@ -6,7 +6,7 @@
         display: none;
     }
 
-    .inner-container {
+    .inner-container{
         flex-direction: column;
     }
 
@@ -17,6 +17,12 @@
     .nav-links,
     .nav-cta {
         display: none;
+    }
+    .function-card {
+        flex-direction: column !important;
+        .card-content {
+            padding-top: 32px;
+        }
     }
 }
 

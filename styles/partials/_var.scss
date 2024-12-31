@@ -30,20 +30,12 @@ $white: #EFF7F2;
     width: max-content;
     background-color: $bg-color;
     height: 100%;
-    @include corner-radius;
+    border-radius: 8px;
     transition: background-color 300ms ease-in-out;
 
     .w-button-inner {
         @include urbanist-font(700, 1rem, $text-color);
         transition: color 200ms ease-in-out;
-    }
-
-    &:hover {
-        background-color: $black;
-
-        .w-button-inner {
-            color: $white;
-        }
     }
 }
 
@@ -53,5 +45,5 @@ $white: #EFF7F2;
 }
 
 @mixin corner-radius {
-    border-radius: 12px;
+    border-radius: 32px;
 }

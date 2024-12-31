@@ -12,8 +12,9 @@
 
 .dark-overlay {
     @include flex-center;
-    @include full-size;
-    position: absolute;
+    height: 100%;
+    width: 100%;
+    position: relative;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.4);
@@ -47,7 +48,8 @@
     height: auto;
 }
 
-.content-col, .content {
+.content-col,
+.content {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -134,13 +136,14 @@
 .card-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 4px;
 }
 
 .function-card {
     @include flex-center;
     flex-direction: column;
-    gap: 28px;
+    gap: 32px;
+    width: 100%;
 }
 
 .inner-card {
@@ -152,7 +155,7 @@
 .card-icon {
     position: relative;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 8px;
     max-width: 36px;
     width: 100%;
     max-height: 36px;
@@ -163,4 +166,61 @@
         height: 100%;
         object-fit: cover;
     }
+}
+
+.project-card {
+    @include corner-radius;
+    overflow: hidden;
+    width: 100%;
+
+    .card-content {
+        padding: 32px;
+        padding-top: 120px;
+        gap: 48px;
+        width: 100%;
+    }
+
+    .card-title {
+        height: 65px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    h5,
+    p {
+        color: white;
+    }
+
+    .inner-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.graph {
+    height: 100%;
+    width: 100%;
+}
+
+.chart-legend {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.legend-item {
+    @include flex-center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+    width: 240px;
+}
+.legend-color {
+    max-width: 28px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
 }

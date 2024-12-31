@@ -63,6 +63,20 @@ p {
 // Buttons
 .w-button-primary {
     @include button-style($primary, $black);
+    &:hover {
+        background-color: $black;
+
+        .w-button-inner {
+            color: $white;
+        }
+    }
+}
+
+.w-button-secondary {
+    @include button-style($white, $black);
+    &:hover {
+        background-color: $primary;
+    }
 }
 
 .w-button-play {

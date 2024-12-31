@@ -38,20 +38,35 @@ html {
     margin-top: 100px;
 }
 
-.w-hero-section {
+.w-hero-section,
+.project-card-001,
+.project-card-002,
+.project-card-003 {
     background: url('../uploads/10897114103101114116104116105/placeholder-1.jpg') center/cover no-repeat;
+}
+
+.whatwedo-section.section {
+    background-color: $section;
+}
+
+.stat-section.section {
+    background-color: $black;
+
 }
 
 .inner-container-102 {
     flex-direction: column;
+
     .w-h6 {
         width: max-content;
     }
+
     .content-line {
         width: 100%;
         display: flex;
         align-items: center;
     }
+
     .title-line {
         max-width: unset;
         flex-grow: 1;
@@ -64,10 +79,38 @@ html {
     padding-top: 0;
 }
 
-.whatwedo-section.section {
-    background-color: $section;
-}
-
 .inner-container-103 .content-col {
     row-gap: 40px;
+}
+
+.inner-container-104 .content {
+    width: 90%;
+}
+
+.inner-container-104 {
+    flex-direction: column;
+
+    .function-card {
+        flex-direction: row;
+    }
+}
+
+.inner-container-105 {
+    .title-line {
+        display: none;
+    }
+
+    .w-h2, .w-p {
+        color: white;
+    }
+    .w-p {
+        opacity: 0.9;
+    }
+    img-col {
+        max-width: 400px;
+    }
+}
+
+#donutchart > div > div:nth-child(1) > div > svg > rect {
+    fill: transparent;
 }
