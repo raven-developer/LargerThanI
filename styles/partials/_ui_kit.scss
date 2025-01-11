@@ -72,6 +72,17 @@ p {
     }
 }
 
+.w-button-primary-1 {
+    @include button-style($primary, $black);
+    &:hover {
+        background-color: $white;
+
+        .w-button-inner {
+            color: $black;
+        }
+    }
+}
+
 .w-button-secondary {
     @include button-style($white, $black);
     &:hover {

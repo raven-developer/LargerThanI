@@ -41,7 +41,8 @@ html {
 .w-hero-section,
 .project-card-001,
 .project-card-002,
-.project-card-003 {
+.project-card-003,
+.cta-content {
     background: url('../uploads/10897114103101114116104116105/placeholder-1.jpg') center/cover no-repeat;
 }
 
@@ -111,6 +112,28 @@ html {
     }
 }
 
+.inner-container-107 {
+    flex-direction: column;
+    align-items: flex-start
+}
+
+.inner-container-107 .content {
+    width: 130%;
+}
+
 #donutchart > div > div:nth-child(1) > div > svg > rect {
     fill: transparent;
+}
+
+.cta-content {
+    .w-h2 {
+        color: $white;
+    }
+    .two-button {
+        @include flex-center;
+    }
+}
+
+.cta-section.section {
+    padding-bottom: 0;
 }
