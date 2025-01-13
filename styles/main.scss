@@ -2,6 +2,7 @@
 @use "partials/ui_kit";
 @use "partials/nav";
 @use "partials/global";
+@use "partials/footer";
 @use "partials/responsive";
 @import "partials/var";
 
@@ -46,7 +47,8 @@ html {
     background: url('../uploads/10897114103101114116104116105/placeholder-1.jpg') center/cover no-repeat;
 }
 
-.whatwedo-section.section {
+.whatwedo-section.section,
+.contact-section.section {
     background-color: $section;
 }
 
@@ -84,16 +86,17 @@ html {
     row-gap: 40px;
 }
 
+.inner-container-104 .function-card,
+.inner-container-107 .function-card {
+    flex-direction: row;
+}
+
 .inner-container-104 .content {
     width: 90%;
 }
 
 .inner-container-104 {
     flex-direction: column;
-
-    .function-card {
-        flex-direction: row;
-    }
 }
 
 .inner-container-105 {
@@ -136,4 +139,14 @@ html {
 
 .cta-section.section {
     padding-bottom: 0;
+}
+
+.event-card-001,
+.event-card-002 {
+    background-color: $primary;
+}
+
+.inner-container-108 {
+    align-items: flex-start;
+    grid-column-gap: 160px;
 }

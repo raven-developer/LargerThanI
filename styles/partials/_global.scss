@@ -230,3 +230,25 @@
     background: #000000;
     border-radius: 32px;
 }
+
+.event-card {
+    @include corner-radius;
+    padding: 32px;
+    flex: 1
+}
+
+.event-content {
+    @include flex-center;
+    gap: 32px;
+    .inner-content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

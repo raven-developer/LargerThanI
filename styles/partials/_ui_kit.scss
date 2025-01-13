@@ -56,10 +56,6 @@ p {
     @include urbanist-font(500, 1rem, $off-black);
 }
 
-.nav-items {
-    @include urbanist-font(500, 16px, $off-black);
-}
-
 // Buttons
 .w-button-primary {
     @include button-style($primary, $black);
@@ -87,6 +83,22 @@ p {
     @include button-style($white, $black);
     &:hover {
         background-color: $primary;
+    }
+}
+
+.w-button-circle {
+    @include button-style($white, $black);
+    @include flex-center;
+    border: 2px solid $white;
+    max-width: 56px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    padding: 0;
+    border-radius: 100%;
+
+    &:hover {
+        background-color: transparent;
+        border: 2px solid $black;
     }
 }
 

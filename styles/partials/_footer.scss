@@ -1,0 +1,70 @@
+@import "_var";
+
+footer {
+    background-color: $black;
+    color: $white;
+    .content-col{
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 32px;
+        flex: 1;
+    }
+    .content {
+        row-gap: 20px;
+    }
+    .form-col {
+        flex: .7;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .footer-container {
+        align-items: flex-start;
+    }
+    .footer-logo {
+        @include flex-center;
+        justify-content: flex-start;
+    
+        img {
+            max-height: 64px;
+            height: 32px;
+        }
+    }
+    
+    .footer-links, .footer-social {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        .w-h6 {
+            color: inherit;
+            opacity: 0.5;
+        }
+    }
+    
+    .footer-items {
+        @include urbanist-font(500, 16px, inherit);
+    }
+    .w-h4, .w-p {
+        color: inherit;
+    }
+
+    .w-form {
+        width: 100%;
+    }
+    .w-input {
+        width: 100%;
+        height: 56px;
+        border: 1px solid rgba(239, 239, 242, .2);
+        @include urbanist-font(500, 16px, $white);
+        padding: 23px 70px 23px 24px;
+        border-radius: 8px;
+    }
+    .w-button {
+        position: absolute;
+        right: 0;
+        max-height: 56px;
+        height: 100%;
+    }
+}
