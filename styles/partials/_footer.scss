@@ -68,3 +68,23 @@ footer {
         height: 100%;
     }
 }
+
+
+@media screen and (max-width: 1023px) {
+    .footer-links, .footer-social {
+        flex: 1;
+    }
+
+    .footer-logo {
+        max-width: 300px;
+    }
+    footer .content-col, .form-col {
+        flex: unset;
+        width: 100%;
+    }
+
+    .footer-links, .footer-social {
+        gap: 10px !important;
+    }
+
+}

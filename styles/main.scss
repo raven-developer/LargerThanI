@@ -120,10 +120,6 @@ html {
     align-items: flex-start
 }
 
-.inner-container-107 .content {
-    width: 130%;
-}
-
 #donutchart > div > div:nth-child(1) > div > svg > rect {
     fill: transparent;
 }
@@ -150,3 +146,15 @@ html {
     align-items: flex-start;
     grid-column-gap: 160px;
 }
+/*
+#about-us,
+#supporters,
+#what-we-do,
+#projects,
+#stat,
+#cta,
+#events, //ISSUE ON 1024px 
+#contact{
+    display: none;
+}
+*/
