@@ -235,11 +235,13 @@
 .event-card {
     @include corner-radius;
     padding: 32px;
-    flex: 1
+    flex: 1;
+    width: 100%;
 }
 
 .event-content {
     @include flex-center;
+    justify-content: space-between;
     gap: 32px;
     .inner-content {
         display: flex;
