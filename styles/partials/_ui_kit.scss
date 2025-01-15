@@ -42,7 +42,7 @@ p {
 }
 
 .w-h6 {
-    @include urbanist-font(700, 1rem, $black);
+    @include urbanist-font(700, 0.9rem, $black);
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -122,4 +122,18 @@ p {
             color: $black;
         }
     }
+}
+
+.w-sub:not(footer .w-sub){
+    padding: 8px 14px 6px 14px;
+    background-color: $section;
+    border-radius: 100px;
+    width: max-content;
+}
+
+.w-sub-1:not(footer .w-sub){
+    padding: 8px 14px 6px 14px;
+    background-color: $white;
+    border-radius: 100px;
+    width: max-content;
 }

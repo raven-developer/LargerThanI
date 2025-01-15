@@ -91,10 +91,6 @@ html {
     flex-direction: row;
 }
 
-.inner-container-104 .content {
-    width: 90%;
-}
-
 .inner-container-104 {
     flex-direction: column;
 }
@@ -158,3 +154,7 @@ html {
     display: none;
 }
 */
+
+.inner-container-105 .img-col {
+    overflow: unset !important;
+}

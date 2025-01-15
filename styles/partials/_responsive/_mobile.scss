@@ -1,0 +1,34 @@
+@import "../var";
+
+footer .content-col,
+.contact-details {
+    flex-direction: column;
+}
+
+.w-h1 {
+    font-size: 2.986rem;
+}
+
+.w-h2 {
+    font-size: 2.488rem;
+}
+
+.w-h3 {
+    font-size: 2.074rem;
+}
+
+.w-h4 {
+    font-size: 1.728rem;
+}
+
+.w-h5 {
+    font-size: 1.25rem;
+}
+
+.inner-container-105 .img-col {
+    max-width: 100%;
+}
+
+.cta-content {
+    padding: 40px 20px;
+}

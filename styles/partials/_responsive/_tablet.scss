@@ -1,0 +1,70 @@
+@import "../var";
+
+.space-col {
+    display: none;
+}
+
+.inner-container {
+    flex-direction: column;
+}
+
+.inner-container:not(.inner-container-104, .inner-container-105, .inner-container-107, .inner-container-108) {
+    grid-row-gap: 100px;
+}
+
+.function-card {
+    flex-direction: column !important;
+}
+
+.img-col {
+    width: 100% !important;
+}
+
+.nav-links,
+.nav-cta {
+    display: none;
+}
+
+.menu-icon {
+    display: flex;
+}
+
+.inner-container.inner-container-101,
+.inner-container.inner-container-103,
+.inner-container.inner-container-105 {
+    flex-direction: column-reverse;
+}
+
+.inner-container-101 .img-col,
+.inner-container-103 .img-col {
+    height: 500px !important;
+}
+
+.contact-details{
+    width: 100% !important;
+    flex-direction: row;
+    flex: 1;
+
+    .c-info {
+        flex: 1;
+    }
+}
+
+.content {
+    row-gap: 10px;
+}
+
+.inner-container-105 .img-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card .card-content {
+    padding-top: 80px;
+}
+
+.two-button {
+    flex-direction: column;
+    row-gap: 24px;
+}
