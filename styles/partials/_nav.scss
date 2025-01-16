@@ -11,7 +11,7 @@
     @include flex-center;
     width: 100%;
     height: auto;
-    z-index: 100;
+    z-index: 10000;
     padding: 20px 0;
     transition: all 200ms ease-in-out;
     border-bottom: 1px solid rgba(239, 239, 242, 0.2);
@@ -68,16 +68,17 @@
 }
 
 .menu-icon {
-    max-width: 42px;
-    max-height: 42px;
-    min-width: 42px;
-    min-height: 42px;
+    max-width: 36px;
+    max-height: 36px;
+    min-width: 36px;
+    min-height: 36px;
     width: 100%;
     height: 100%;
     padding: 2px;
     background-color: $primary;
     border-radius: 8px;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .menu-icon.active {
@@ -94,19 +95,85 @@
     user-select: none;
 }
 
+.nav-popup {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px 20px 20px;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: left 400ms ease-in-out;
+    z-index: 9999;
+    
+    
+    .nav-items {
+        color: $black;
+        padding: 16px 32px;
+        width: 100%;
+        border-bottom: 1px solid #1d213038;
+    }
+
+    .nav-popup-content, .nav-content {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;
+        align-items: flex-end;
+        
+    }
+    
+    .nav-content {
+        border-top: 2px solid $black;
+    }
+
+    .w-button {
+        width: 100%;
+    }
+
+    .menu-area {
+        height: 36px;
+        width: 100%;
+        margin: 14px 0;
+    }
+
+    .w-button-primary {
+        max-height: 59px;
+        height: 100%;
+        text-align: center;
+    }
+
+}
+
+.active {
+    left: 0;
+}
+
+.open {
+    padding: 14px 0;
+}
+
 .squeeze {
-    animation: squeeze 300ms forwards; 
+    animation: squeeze 300ms forwards;
 }
 
 @keyframes squeeze {
     0% {
         transform: scale(1, 1);
     }
+
     40% {
-        transform: scale(1, 0.4); /* Squeeze horizontally */
+        transform: scale(1, 0.4);
+        /* Squeeze horizontally */
     }
+
     100% {
-        transform: scale(1, 1); /* Return to original size */
+        transform: scale(1, 1);
+        /* Return to original size */
     }
 }
 

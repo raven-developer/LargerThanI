@@ -1,5 +1,13 @@
 @import "../var";
 
+.nav-links, .nav-cta {
+    display: none;
+}
+
+.nav-logo img {
+    height: 28px;
+}
+
 .space-col {
     display: none;
 }
@@ -8,7 +16,7 @@
     flex-direction: column;
 }
 
-.inner-container:not(.inner-container-104, .inner-container-105, .inner-container-107, .inner-container-108) {
+.inner-container:not(.inner-container-102, .inner-container-104, .inner-container-105, .inner-container-107, .inner-container-108) {
     grid-row-gap: 100px;
 }
 

@@ -158,3 +158,13 @@ html {
 .inner-container-105 .img-col {
     overflow: unset !important;
 }
+
+.inner-container-102 .img-col {
+    overflow: hidden !important
+}
+
+.inner-container.inner-container-102 {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
