@@ -1,4 +1,4 @@
-# Larger than _I_
+# largerthan_I_
 We provide a place for children with special needs.
 
 ## Information
