@@ -1,5 +1,6 @@
-# largerthan_I_
+# largerthan _I_
 We provide a place for children with special needs.
+
 
 ## Information
 This website's sole purpose was to test my skills on building a simple website using HTML and CSS. While building, I tried to incorporate Syntactically Awesome Style Sheets (Sass) as my CSS pre-processor.
