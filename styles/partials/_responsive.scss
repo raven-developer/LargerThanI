@@ -21,9 +21,12 @@
 }
 //Tablet styles
 @media screen and (max-width: 1023px) {
+    html {
+        font-size: 16px;
+      }
     @import "_responsive/tablet";
     .hero-banner {
-        height: calc(100vh - 50px) !important;
+        height: calc(100vh - 30px) !important;
     }
 }
 

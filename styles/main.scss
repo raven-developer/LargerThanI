@@ -6,11 +6,6 @@
 @use "partials/responsive";
 @import "partials/var";
 
-html {
-    font-size: 18px;
-    scroll-behavior: smooth !important
-}
-
 //Overrides
 .hero-banner {
     .w-p {
